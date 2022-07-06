@@ -7,6 +7,8 @@ const Laser = preload("res://Laser.tscn")
 
 export(int) var SPEED = 100
 
+signal playerDeath
+
 #Basic controls
 func _process(delta):
 	if Input.is_action_pressed("ui_up"):
@@ -29,6 +31,7 @@ func _exit_tree():
 	var explosionEffect = ExplosionEffect.instance()
 	main.add_child(explosionEffect)
 	explosionEffect.global_position = global_position
+	emit_signal("playerDeath")
 
 
 #Destory ship when something hits it
