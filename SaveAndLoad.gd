@@ -1,8 +1,8 @@
 extends Node
 
-const SAVE_DATA_PATH = "res//save_data.json"
+const SAVE_DATA_PATH = "res://save_data.json"
 var default_save_data = {
-	highscore = 0
+	highscore = 0,
 }
 
 #Open file to write, save as json, close file
